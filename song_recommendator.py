@@ -157,10 +157,7 @@ def load(df):
     new_f.write(ET.tostring(file, encoding='unicode')) 
     new_f.close()
 
-if __name__ == '__main__':
-    df1, df2 = extract()
-    df = transform(df1, df2)
-    load(df)
+def main(df):
     
     # Interactive mode
     os.system('cls||clear')
@@ -212,3 +209,9 @@ if __name__ == '__main__':
     
   
 
+if __name__ == '__main__':
+    df1, df2 = extract()
+    df = transform(df1, df2)
+    load(df)
+    
+    main(df)
